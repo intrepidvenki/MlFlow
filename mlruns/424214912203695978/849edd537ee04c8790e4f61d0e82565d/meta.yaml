@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/424214912203695978/849edd537ee04c8790e4f61d0e82565d/artifacts
+end_time: 1726075681933
+entry_point_name: ''
+experiment_id: '424214912203695978'
+lifecycle_stage: active
+run_id: 849edd537ee04c8790e4f61d0e82565d
+run_name: learned-smelt-69
+run_uuid: 849edd537ee04c8790e4f61d0e82565d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726075669614
+status: 3
+tags: []
+user_id: venki

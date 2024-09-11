@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/424214912203695978/85a5fa1eef1a4353bc7f6da1fec6b88b/artifacts
+end_time: 1726075973977
+entry_point_name: ''
+experiment_id: '424214912203695978'
+lifecycle_stage: active
+run_id: 85a5fa1eef1a4353bc7f6da1fec6b88b
+run_name: gaudy-foal-403
+run_uuid: 85a5fa1eef1a4353bc7f6da1fec6b88b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726075968468
+status: 3
+tags: []
+user_id: venki

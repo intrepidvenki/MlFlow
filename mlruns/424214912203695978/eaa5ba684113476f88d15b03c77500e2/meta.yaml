@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/424214912203695978/eaa5ba684113476f88d15b03c77500e2/artifacts
+end_time: 1726075867739
+entry_point_name: ''
+experiment_id: '424214912203695978'
+lifecycle_stage: active
+run_id: eaa5ba684113476f88d15b03c77500e2
+run_name: nervous-kite-903
+run_uuid: eaa5ba684113476f88d15b03c77500e2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726075861940
+status: 3
+tags: []
+user_id: venki
