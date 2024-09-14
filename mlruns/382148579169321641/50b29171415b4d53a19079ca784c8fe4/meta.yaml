@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/382148579169321641/50b29171415b4d53a19079ca784c8fe4/artifacts
+end_time: 1726337998716
+entry_point_name: ''
+experiment_id: '382148579169321641'
+lifecycle_stage: active
+run_id: 50b29171415b4d53a19079ca784c8fe4
+run_name: sincere-skunk-882
+run_uuid: 50b29171415b4d53a19079ca784c8fe4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726337991175
+status: 3
+tags: []
+user_id: venki

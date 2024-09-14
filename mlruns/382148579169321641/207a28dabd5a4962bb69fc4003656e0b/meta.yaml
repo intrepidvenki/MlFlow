@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/382148579169321641/207a28dabd5a4962bb69fc4003656e0b/artifacts
+end_time: 1726338372475
+entry_point_name: ''
+experiment_id: '382148579169321641'
+lifecycle_stage: active
+run_id: 207a28dabd5a4962bb69fc4003656e0b
+run_name: abrasive-boar-917
+run_uuid: 207a28dabd5a4962bb69fc4003656e0b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726338365231
+status: 3
+tags: []
+user_id: venki

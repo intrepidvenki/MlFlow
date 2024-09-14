@@ -72,11 +72,26 @@ if __name__ == "__main__":
     print("  MAE: %s" % mae)
     print("  R2: %s" % r2)
 
-    mlflow.log_param("alpha", alpha)
-    mlflow.log_param("l1_ratio", l1_ratio)
-    mlflow.log_metric("rmse", rmse)
-    mlflow.log_metric("r2", r2)
-    mlflow.log_metric("mae", mae)
+    # mlflow.log_param("alpha", alpha)
+    # mlflow.log_param("l1_ratio", l1_ratio)
+
+    parms = {
+        "alpha" : alpha,
+        "l1_ratio" : l1_ratio
+    }
+    mlflow.log_params(parms)
+
+    # mlflow.log_metric("rmse", rmse)
+    # mlflow.log_metric("r2", r2)
+    # mlflow.log_metric("mae", mae)
+
+    metric = {
+        "rmse" : rmse,
+        "r2" : r2,
+        "mae" : mae
+    }
+    mlflow.log_metrics(metric)
+    mlflow.log_artifact('E:\\MLflow\\red-wine-quality.csv')
     mlflow.sklearn.log_model(lr, "my_new_model_1")
 
     # run = mlflow.active_run()
