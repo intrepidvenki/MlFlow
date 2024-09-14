@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/424214912203695978/6932a5df70f845dc80aac2a562293e7c/artifacts
+end_time: 1726160273975
+entry_point_name: ''
+experiment_id: '424214912203695978'
+lifecycle_stage: active
+run_id: 6932a5df70f845dc80aac2a562293e7c
+run_name: nosy-cub-632
+run_uuid: 6932a5df70f845dc80aac2a562293e7c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726160261524
+status: 3
+tags: []
+user_id: venki

@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/397287013405037598/eb5fe8c1f95542d494cc5c0e5f631986/artifacts
+end_time: 1726335685601
+entry_point_name: ''
+experiment_id: '397287013405037598'
+lifecycle_stage: active
+run_id: eb5fe8c1f95542d494cc5c0e5f631986
+run_name: abrasive-fish-268
+run_uuid: eb5fe8c1f95542d494cc5c0e5f631986
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726335673132
+status: 3
+tags: []
+user_id: venki

@@ -7,20 +7,19 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
 import mlflow
-import mlflow.sklearn 
+import mlflow.sklearn
 from pathlib import Path
-
 
 logging.basicConfig(level=logging.WARN)
 logger = logging.getLogger(__name__)
 
-#get arguments from command
+# get arguments from command
 parser = argparse.ArgumentParser()
 parser.add_argument("--alpha", type=float, required=False, default=0.7)
 parser.add_argument("--l1_ratio", type=float, required=False, default=0.7)
 args = parser.parse_args()
 
-#evaluation function
+# evaluation function
 def eval_metrics(actual, pred):
     rmse = np.sqrt(mean_squared_error(actual, pred))
     mae = mean_absolute_error(actual, pred)
@@ -32,9 +31,8 @@ if __name__ == "__main__":
     warnings.filterwarnings("ignore")
     np.random.seed(40)
 
-    # Read the wine-quality csv file from local
-    data = pd.read_csv("E:/MLflow/red-wine-quality.csv")
-    data.to_csv("red-wine-quality.csv", index=False)
+    # Read the wine-quality csv file from the URL
+    data = pd.read_csv("red-wine-quality.csv")
 
     # Split the data into training and test sets. (0.75, 0.25) split.
     train, test = train_test_split(data)
@@ -48,17 +46,11 @@ if __name__ == "__main__":
     alpha = args.alpha
     l1_ratio = args.l1_ratio
 
-
     mlflow.set_tracking_uri(uri="")
-    ##Using mlflow 
-    # exp_id = mlflow.create_experiment(
-    #     name="Exp_create_V1", 
-    #     tags={"version": "v1", "priority": "p1"},
-    #     artifact_location=Path.cwd().joinpath("myartifacts").as_uri()
-    # )
-    # get_exp = mlflow.get_experiment(exp_id)
 
-    exp = mlflow.set_experiment(experiment_id="Exp_create_V1")
+    print("The set tracking uri is ", mlflow.get_tracking_uri())
+    exp = mlflow.set_experiment(experiment_name="experiment_2")
+    #get_exp = mlflow.get_experiment(exp_id)
 
     print("Name: {}".format(exp.name))
     print("Experiment_id: {}".format(exp.experiment_id))
@@ -67,26 +59,32 @@ if __name__ == "__main__":
     print("Lifecycle_stage: {}".format(exp.lifecycle_stage))
     print("Creation timestamp: {}".format(exp.creation_time))
 
+    mlflow.start_run()
+    lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
+    lr.fit(train_x, train_y)
 
-    print("the set tracking uri is", mlflow.get_tracking_uri)
+    predicted_qualities = lr.predict(test_x)
 
+    (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
 
-    with mlflow.start_run(experiment_id=exp.experiment_id, run_name="run_1"):
-        lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
-        lr.fit(train_x, train_y)
+    print("Elasticnet model (alpha={:f}, l1_ratio={:f}):".format(alpha, l1_ratio))
+    print("  RMSE: %s" % rmse)
+    print("  MAE: %s" % mae)
+    print("  R2: %s" % r2)
 
-        predicted_qualities = lr.predict(test_x)
+    mlflow.log_param("alpha", alpha)
+    mlflow.log_param("l1_ratio", l1_ratio)
+    mlflow.log_metric("rmse", rmse)
+    mlflow.log_metric("r2", r2)
+    mlflow.log_metric("mae", mae)
+    mlflow.sklearn.log_model(lr, "my_new_model_1")
 
-        (rmse, mae, r2) = eval_metrics(test_y, predicted_qualities)
+    # run = mlflow.active_run()
+    # print("Active run id {}" .format(run.info.run_id))
+    # print("Active run name is {}".format(run.info.run_name))
 
-        print("Elasticnet model (alpha={:f}, l1_ratio={:f}):".format(alpha, l1_ratio))
-        print("  RMSE: %s" % rmse)
-        print("  MAE: %s" % mae)
-        print("  R2: %s" % r2)
+    mlflow.end_run()
 
-        mlflow.log_param("alpha", alpha)
-        mlflow.log_param("l1_ratio", l1_ratio)
-        mlflow.log_metric("rmse", rmse)
-        mlflow.log_metric("mea", mae)
-        mlflow.log_metric("r2", r2)
-        mlflow.sklearn.log_model(lr, "mymodel")
+    run = mlflow.last_active_run()
+    print("Active run id is {}".format(run.info.run_id))
+    print("Active run name is {}".format(run.info.run_name))

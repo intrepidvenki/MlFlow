@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/382148579169321641/b3c335d304434c6293a9ece628553a26/artifacts
+end_time: 1726337227283
+entry_point_name: ''
+experiment_id: '382148579169321641'
+lifecycle_stage: active
+run_id: b3c335d304434c6293a9ece628553a26
+run_name: unique-snipe-395
+run_uuid: b3c335d304434c6293a9ece628553a26
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726337219882
+status: 3
+tags: []
+user_id: venki

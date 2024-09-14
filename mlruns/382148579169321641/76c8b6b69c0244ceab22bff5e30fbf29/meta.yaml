@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/382148579169321641/76c8b6b69c0244ceab22bff5e30fbf29/artifacts
+end_time: 1726337485322
+entry_point_name: ''
+experiment_id: '382148579169321641'
+lifecycle_stage: active
+run_id: 76c8b6b69c0244ceab22bff5e30fbf29
+run_name: welcoming-kit-630
+run_uuid: 76c8b6b69c0244ceab22bff5e30fbf29
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726337477896
+status: 3
+tags: []
+user_id: venki
