@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/382148579169321641/9ce300762ef14464b53dd14349febc79/artifacts
+end_time: 1726387424283
+entry_point_name: ''
+experiment_id: '382148579169321641'
+lifecycle_stage: active
+run_id: 9ce300762ef14464b53dd14349febc79
+run_name: redolent-wasp-376
+run_uuid: 9ce300762ef14464b53dd14349febc79
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726387415680
+status: 3
+tags: []
+user_id: venki

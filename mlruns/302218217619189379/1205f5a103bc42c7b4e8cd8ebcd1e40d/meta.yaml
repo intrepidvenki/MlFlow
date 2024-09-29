@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/302218217619189379/1205f5a103bc42c7b4e8cd8ebcd1e40d/artifacts
+end_time: 1727018671959
+entry_point_name: ''
+experiment_id: '302218217619189379'
+lifecycle_stage: active
+run_id: 1205f5a103bc42c7b4e8cd8ebcd1e40d
+run_name: run3.1
+run_uuid: 1205f5a103bc42c7b4e8cd8ebcd1e40d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727018665639
+status: 3
+tags: []
+user_id: venki

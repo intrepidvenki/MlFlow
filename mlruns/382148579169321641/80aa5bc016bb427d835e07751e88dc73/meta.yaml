@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/382148579169321641/80aa5bc016bb427d835e07751e88dc73/artifacts
+end_time: 1726387178610
+entry_point_name: ''
+experiment_id: '382148579169321641'
+lifecycle_stage: active
+run_id: 80aa5bc016bb427d835e07751e88dc73
+run_name: delicate-hawk-975
+run_uuid: 80aa5bc016bb427d835e07751e88dc73
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1726387165271
+status: 3
+tags: []
+user_id: venki

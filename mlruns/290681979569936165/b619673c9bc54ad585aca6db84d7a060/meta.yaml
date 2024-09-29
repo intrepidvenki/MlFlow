@@ -1,0 +1,15 @@
+artifact_uri: file:///E:/MLflow/mlruns/290681979569936165/b619673c9bc54ad585aca6db84d7a060/artifacts
+end_time: 1727618916092
+entry_point_name: ''
+experiment_id: '290681979569936165'
+lifecycle_stage: active
+run_id: b619673c9bc54ad585aca6db84d7a060
+run_name: delicate-lark-687
+run_uuid: b619673c9bc54ad585aca6db84d7a060
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1727618903681
+status: 3
+tags: []
+user_id: venki

@@ -1,0 +1,6 @@
+artifact_location: file:///E:/MLflow/mlruns/290681979569936165
+creation_time: 1727617777541
+experiment_id: '290681979569936165'
+last_update_time: 1727617777541
+lifecycle_stage: active
+name: experiment_autolog
